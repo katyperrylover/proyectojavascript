@@ -1,0 +1,10 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.formulario{
+    display: flex;
+    flex-direction:column;
+    line-height: 2em;
+}

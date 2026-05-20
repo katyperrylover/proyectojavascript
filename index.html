@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="dialog" id="formulario" class="formulario">
+        <label for="dinero">Cantidad</label>
+        <input type="text" name="dinero" id="dineroPrin">
+
+        <label for="tasa">Tasa de interés</label>
+        <input type="text" name="tasa" id="tasaInt">
+        <label for="fecha">De 2026 a...</label>
+        <input type="number" name="fecha" id="fechaFinal" value="2026">
+        <br>
+        <input type="submit" value="Calcular">
+        <label for="resultado" id="resultado"></label>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
