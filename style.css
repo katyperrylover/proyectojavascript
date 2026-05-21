@@ -1,7 +1,34 @@
 body{
-    background-color: rgb(78, 66, 66);
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(105, 14, 49);
     color: white;
+    margin: 2em;
 }
+
+label{
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0.2em 0;
+}
+
+.submitButton{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform:lowercase;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: all 0.3s ease;
+}
+/*
+.submitButton:hover{
+    text-transform: uppercase;
+    font-size: 1.2em;
+}*/
 
 .formulario{
     display: flex;
@@ -9,38 +36,56 @@ body{
     line-height: 2em;
 }
 
-.dinero, .tasa{
+.dinero, .tasa, .fecha{
     display: flex;
+    flex-direction: column;
     position: relative;
+    height: max-content;
+    width: max-content;
 }
 
-span{
-    height: auto;
+.dinero{
+    width: 80%;
+    text-overflow: ellipsis;
+}
+
+.fecha{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap:10px;
+}
+
+.icon, .iconTasa{
+    height: fit-content;
     position: absolute;
     color: black;
-    top: 50%;
+    margin: -5px;
     left: 10px;
-    transform: translate(-50%, -50%);
 }
 
-.typebox{
+.iconTasa{
+    left: 42px;
+}
+
+
+.typeboxDine, .typeboxTasa,.typeboxFecha{
     border: none;
-    width: 400px;
+    padding-left: 20px;
+    height: 20px;
+    width:100%;
+}
+
+.typeboxFecha,.typeboxTasa{
     padding-left:10px;
 }
 
 
-input:last-child{
-    width: 800px;
-    padding-left: 20px;
-}
-
-.fecha{
-    display: flex;
-    gap:10px;
-}
-
 .selectbox{
     border: none;
-    width: 400px;
+    width: 100%;
+}
+
+.errorLabel{
+    color: red;
 }
