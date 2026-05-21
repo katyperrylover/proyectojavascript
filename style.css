@@ -90,6 +90,8 @@ label{
     width: 100%;
 }
 
-.errorLabel{
-    color: red;
+.resultin{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 1em;
 }
