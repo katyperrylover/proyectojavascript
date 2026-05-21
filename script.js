@@ -70,8 +70,6 @@ document.getElementById('formulario').onsubmit = function() {
 
     // el contador es importante para q la formula sea correcta
     let contador = 1;
-    
-
 
     // si la fecha es uno, se saltea el bucle
     if (fecha === 1) {
@@ -80,7 +78,6 @@ document.getElementById('formulario').onsubmit = function() {
         return true;
     }
 
-    
     // este es el bucle bien piola donde calculo el interes por el anio
     while (fecha > 1) {
         // tuve un problema con la formula y la solucion era cambiar
