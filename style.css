@@ -2,7 +2,7 @@ body{
     font-family: 'Arial', sans-serif;
     background-color: rgb(105, 14, 49);
     color: white;
-    margin: 2em;
+    margin: 1em;
 }
 
 label{
@@ -45,7 +45,8 @@ label{
 }
 
 .dinero{
-    width: 80%;
+    width: 100%;
+    justify-content: center;
     text-overflow: ellipsis;
 }
 
@@ -71,15 +72,18 @@ label{
 
 .typeboxDine, .typeboxTasa,.typeboxFecha{
     border: none;
+    width:100%;
     padding-left: 20px;
     height: 20px;
-    width:100%;
 }
 
 .typeboxFecha,.typeboxTasa{
     padding-left:10px;
 }
 
+.typeboxDine{
+    width: auto;
+}
 
 .selectbox{
     border: none;

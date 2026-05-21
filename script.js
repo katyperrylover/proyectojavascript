@@ -11,18 +11,38 @@ function cambiarValorAlComun(input) {
     }
 }
 
+// funcion de chabon quisquilloso
+function cambiarValorAlComunFecha(input) {
+    if (parseInt(input.value) === 1){
+        document.getElementById("a").innerHTML = "Año";
+        document.getElementById("m").innerHTML = "Mes";
+        return;
+    }
+    document.getElementById("a").innerHTML = "Años";
+    document.getElementById("m").innerHTML = "Meses";
+}
+
+// aplico la funcion para q no se pase
 document.getElementsByClassName('typeboxTasa')[0].oninput = function() {
     cambiarValorAlComun(this);
 };
 
+// aplico la funcion de chabon quisquilloso
 document.getElementsByClassName('typeboxFecha')[0].oninput = function() {
-    cambiarValorAlComun(this);
+    cambiarValorAlComunFecha(this);
 };
+
+// esta funcion hace q los numeros tengan un formato con puntitos
+function formatoEntendible(x) {
+  return x.toLocaleString("es-AR");
+}
 
 // aca como q agarre al formulario y me fijo si los datos se enviaron o algo asi
 document.getElementById('formulario').onsubmit = function() {
+    // si se enviaron empieza toda esta funcionn :)
     let resultado_texto = document.getElementById("resultado");
-    let resultado, temp;
+    let resultado;
+
     // dinero calculado
     let dinero = Number(document.getElementById("dineroPrin").value);
 
@@ -32,28 +52,29 @@ document.getElementById('formulario').onsubmit = function() {
 
     // fecha calculada
     let fecha = Number(document.getElementById("fechaFinal").value);
-    
-    if (fecha === "" || tasa === "" || dinero === "") {
+
+    // si alguna casilla esta vacia, tira error
+    if (!dinero || !tasa || !fecha) {
         resultado_texto.innerText = "Error, alguna casilla esta vacia lpm";
         return false;
     }
 
-    //if (fecha <= 2026) {
-    //    resultado_texto.innerText = "Error de fecha";
-    //    return false;
-    //}
+    // el contador es importante para q la formula sea correcta
     let contador = 1;
 
     // este es el bucle bien piola donde calculo el interes por el anio
-    while (fecha > 0) {
-        resultado = dinero * (1+tasa);
+    
+    while (fecha > 1) {
+        // tuve un problema con la formula y la solucion era cambiar
+        // fecha > 0 por fecha > 1 jajajajs
+        resultado = parseFloat((dinero * (1+tasa)**contador).toFixed(2));
         console.log("año " + contador + ": $" + resultado);
-        dinero = resultado;
         contador++;
         fecha--;
     }
     
-    resultado_texto.innerText = resultado;
+    resultado = parseFloat(resultado.toFixed(2));
+    resultado_texto.innerText = "$ " + formatoEntendible(resultado);
     return true;
     
 };
