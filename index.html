@@ -11,26 +11,30 @@
         <label for="dinero">Cantidad</label>
         <div class="dinero">
             <div class="icon"><span>$</span></div>
-            <input class="typebox" type="text" name="dinero" id="dineroPrin">
-        </div>
-
-        <label for="tasa">Tasa de interés</label>
-        <div class="tasa">
-            <div class="icon"><span>%</span></div>
-            <input class="typebox" type="text" name="tasa" id="tasaInt">           
+            <input class="typeboxDine" type="text" name="dinero" id="dineroPrin" placeholder="10000">
+            <!-- <label class="errorLabel" id="errorDinero"></label> -->
         </div>
         
-        <label for="fecha">De 2026 a...</label>
+        <label for="tasa">Tasa de interés</label>
+        <div class="tasa">
+            <div class="iconTasa"><span>%</span></div>
+            <input class="typeboxTasa" type="number" name="tasa" id="tasaInt" placeholder="0" min="0" max="100">           
+            <!--  <label class="errorLabel" id="errorTasa"></label> -->
+        </div>
+        
+        <label for="fecha">Plazo del interes</label>
         <div class="fecha">
-            <input class="typebox" type="number" name="fecha" id="fechaFinal" value="2026" min="2026">
+            <input class="typeboxFecha" type="number" name="fecha" id="fechaFinal" placeholder="2" min="1">
             <select class="selectbox" name="lista" id="listaOpciones">
                 <option value="m">Meses</option>
                 <option value="a">Años</option>
             </select>
+            <!-- <label class="errorLabel" id="errorPlazo"></label> -->
         </div>
+        
         <br>
-        <input type="submit" value="Calcular">
-        <label for="resultado" id="resultado"></label>
+        <input class="submitButton" type="submit" value="Calcular">
+        <label id="resultado"></label>
     </form>
     <script src="script.js"></script>
 </body>
