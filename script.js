@@ -72,9 +72,11 @@ document.getElementById('formulario').onsubmit = function() {
     let contador = 1;
 
     // si la fecha es uno, se saltea el bucle
-    if (fecha === 1) {
+    if (fecha === 1) {        
         resultado = parseFloat((dinero * (1+tasa)**contador).toFixed(2));
+        console.log(opcionPlazo + " " + contador + ": $" + resultado);
         resultado_texto.innerText = "$ " + formatoEntendible(resultado);
+        
         return true;
     }
 
