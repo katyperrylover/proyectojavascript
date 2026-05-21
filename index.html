@@ -9,12 +9,25 @@
 <body>
     <form method="dialog" id="formulario" class="formulario">
         <label for="dinero">Cantidad</label>
-        <input type="text" name="dinero" id="dineroPrin">
+        <div class="dinero">
+            <div class="icon"><span>$</span></div>
+            <input class="typebox" type="text" name="dinero" id="dineroPrin">
+        </div>
 
         <label for="tasa">Tasa de interés</label>
-        <input type="text" name="tasa" id="tasaInt">
+        <div class="tasa">
+            <div class="icon"><span>%</span></div>
+            <input class="typebox" type="text" name="tasa" id="tasaInt">           
+        </div>
+        
         <label for="fecha">De 2026 a...</label>
-        <input type="number" name="fecha" id="fechaFinal" value="2026">
+        <div class="fecha">
+            <input class="typebox" type="number" name="fecha" id="fechaFinal" value="2026" min="2026">
+            <select class="selectbox" name="lista" id="listaOpciones">
+                <option value="m">Meses</option>
+                <option value="a">Años</option>
+            </select>
+        </div>
         <br>
         <input type="submit" value="Calcular">
         <label for="resultado" id="resultado"></label>

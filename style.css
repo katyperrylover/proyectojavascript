@@ -1,5 +1,5 @@
 body{
-    background-color: black;
+    background-color: rgb(78, 66, 66);
     color: white;
 }
 
@@ -7,4 +7,40 @@ body{
     display: flex;
     flex-direction:column;
     line-height: 2em;
+}
+
+.dinero, .tasa{
+    display: flex;
+    position: relative;
+}
+
+span{
+    height: auto;
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.typebox{
+    border: none;
+    width: 400px;
+    padding-left:10px;
+}
+
+
+input:last-child{
+    width: 800px;
+    padding-left: 20px;
+}
+
+.fecha{
+    display: flex;
+    gap:10px;
+}
+
+.selectbox{
+    border: none;
+    width: 400px;
 }

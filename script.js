@@ -1,6 +1,11 @@
-let tasa = document.getElementById("tasaInt");
-if (tasa.value > 100){
-    tasa.innerHTML = 100;
+document.getElementsById('tasaInt')[0].oninput = function () {
+    let max = parseInt(this.max);
+    let min = parseInt(this.min);
+    if (parseInt(this.value) > max) {
+        this.value = max; 
+    } else if(parseInt(this.value) < min){
+        this.value = min
+    }
 }
 
 document.getElementById('formulario').onsubmit = function() {
