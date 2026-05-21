@@ -2,11 +2,10 @@
 function cambiarValorAlComun(input) {
     const max = parseInt(input.max);
     const min = parseInt(input.min);
-    const value = parseInt(input.value);
 
-    if (value > max) {
+    if (input.value > max) {
         input.value = max;
-    } else if (value < min) {
+    } else if (input.value < min) {
         input.value = min;
     }
 }
@@ -26,7 +25,6 @@ function cambiarValorAlComunFecha(input) {
 function formatoEntendible(x) {
   return x.toLocaleString("es-AR");
 }
-
 
 // aplico la funcion para q no se pase
 document.getElementsByClassName('typeboxTasa')[0].oninput = function() {
@@ -50,6 +48,8 @@ document.getElementById('formulario').onsubmit = function() {
 
     // tasa calculada
     let tasa = Number(document.getElementById("tasaInt").value);
+
+    // creo q si por mes se divide en doce, por eso el codigo
     if (document.getElementById("listaOpciones").value === "m") {
         tasa = (tasa / 100) / 12;
         opcionPlazo = "mes";
