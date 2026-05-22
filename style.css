@@ -2,7 +2,15 @@ body{
     font-family: 'Arial', sans-serif;
     background-color: rgb(105, 14, 49);
     color: white;
-    margin: 1em;
+    margin: 0.5em;
+}
+
+.pag{
+    background-color: rgb(88, 17, 72);
+    border: rgba(12, 2, 20, 0.179) solid 0.1em;
+    border-radius: 1em 1em 1em 1em;
+    padding: 0.4em;
+    height: fit-content;
 }
 
 label{
@@ -93,5 +101,6 @@ label{
 .resultin{
     font-size: 1.5em;
     font-weight: 600;
-    margin-top: 1em;
+    margin-top: 0.5em;
+    padding: 0;
 }
