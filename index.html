@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pag">
+    <form method="dialog" id="formulario" class="formulario">
+        <label for="dinero">Cantidad</label>
+        <div class="dinero">
+            <div class="icon"><span>$</span></div>
+            <input class="typeboxDine" type="text" name="dinero" id="dineroPrin" placeholder="10000">
+            <!-- <label class="errorLabel" id="errorDinero"></label> -->
+        </div>
+        
+        <label for="tasa">Tasa de interés</label>
+        <div class="tasa">
+            <div class="iconTasa"><span>%</span></div>
+            <input class="typeboxTasa" type="number" name="tasa" id="tasaInt" placeholder="25" min="1" max="100">           
+            <!--  <label class="errorLabel" id="errorTasa"></label> -->
+        </div>
+        
+        <label for="fecha">Plazo del interes</label>
+        <div class="fecha">
+            <input class="typeboxFecha" type="number" name="fecha" id="fechaFinal" placeholder="2" min="1">
+            <select class="selectbox" name="lista" id="listaOpciones">
+                <option value="m" id="m">Meses</option>
+                <option value="a" id="a">Años</option>
+            </select>
+            <!-- <label class="errorLabel" id="errorPlazo"></label> -->
+        </div>
+        
+        <br>
+        <input class="submitButton" type="submit" value="Calcular">
+        <label class="resultin" id="resultado"></label>
+    </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
