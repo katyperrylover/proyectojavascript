@@ -1,18 +1,17 @@
 body{
     font-family: 'Arial', sans-serif;
-    background-color: rgb(105, 14, 49);
+    background-color: rgb(49, 6, 23);
     color: white;
     margin: 0.5em;
 }
 
 .pag{
     border: rgba(12, 2, 20, 0.918) solid 0.1em;
-    background-color: rgb(32, 3, 3);
+    background-color: rgb(73, 8, 44);
     border-radius: 0.5em;
     padding: 0.4em;
     height: fit-content;
 }
-
 
 label{
     font-size: 0.8em;
