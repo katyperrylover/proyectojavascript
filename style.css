@@ -1,0 +1,106 @@
+body{
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(105, 14, 49);
+    color: white;
+    margin: 0.5em;
+}
+
+.pag{
+    border: rgba(12, 2, 20, 0.918) solid 0.1em;
+    background-color: rgb(226, 26, 199);
+    border-radius: 0.5em;
+    padding: 0.4em;
+    height: fit-content;
+}
+
+label{
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0.2em 0;
+}
+
+.submitButton{
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform:lowercase;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    margin-top: 1em;
+    transition: all 0.3s ease;
+}
+/*
+.submitButton:hover{
+    text-transform: uppercase;
+    font-size: 1.2em;
+}*/
+
+.formulario{
+    display: flex;
+    flex-direction:column;
+    line-height: 2em;
+}
+
+.dinero, .tasa, .fecha{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: max-content;
+    width: max-content;
+}
+
+.dinero{
+    width: 100%;
+    justify-content: center;
+    text-overflow: ellipsis;
+}
+
+.fecha{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap:10px;
+}
+
+.icon, .iconTasa{
+    height: fit-content;
+    position: absolute;
+    color: black;
+    margin: -5px;
+    left: 10px;
+}
+
+.iconTasa{
+    left: 42px;
+}
+
+
+.typeboxDine, .typeboxTasa,.typeboxFecha{
+    border: 1px solid black;
+    width:100%;
+    padding-left: 20px;
+    height: 20px;
+}
+
+.typeboxFecha,.typeboxTasa{
+    padding-left:10px;
+}
+
+.typeboxDine{
+    width: auto;
+}
+
+.selectbox{
+    border: none;
+    width: 100%;
+}
+
+.resultin{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0.5em;
+    padding: 0;
+}
